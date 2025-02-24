@@ -11,7 +11,7 @@ if (isset($_SESSION['login_id'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WageIt</title>
-    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB2Qbh2amohPTPGSfvg610ADDG5IyCzc5o0wHDbAhJZA&s" type="image/x-icon">
+    <link rel="shortcut icon" href="image/wageit.svg" type="image/x-icon">
     <?php include('./header.php'); ?>
     <?php include('./db_connect.php'); ?>
 </head>
@@ -272,16 +272,37 @@ if (isset($_SESSION['login_id'])) {
         left: -50%;
         box-shadow: 4rem 0 var(--hair);
     }
+
+    .hello-message {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: start;
+        margin-bottom: 1rem;
+    }
+
+    .wage-it-hello {
+        color: #306090;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
 </style>
 <body>
     <main id="main">
-        <div id="login-left">
-
+        <div id="login-left" class="column">
 		</div>
         <div id="login-right">
             <div class="card col-md-8">
                 <div class="card-body">
                     <form id="login-form">
+                        <h5 class="hello-message"> Hello there! </h5>
+                        
+                        <div class="row"> 
+                            <h6>&nbsp &nbsp Login to your&nbsp</h6>
+                            <h6 class="wage-it-hello">WAGEit</h6>
+                            <h6>&nbspaccount.</h6>
+                        </div>
+                        
 						<figure aria-hidden="true">
                             <div class="person-body"></div>
                             <div class="neck skin"></div>

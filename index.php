@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>WageIt</title>
-  <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB2Qbh2amohPTPGSfvg610ADDG5IyCzc5o0wHDbAhJZA&s" type="image/x-icon" />
+  <title>WAGEit</title>
+  <link rel="shortcut icon" href="image/wageit.svg" type="image/x-icon" />
 
   <?php
   session_start();
