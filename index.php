@@ -45,23 +45,25 @@
     margin-right: 3px;
     margin-left: 3px;
     border: transparent;
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: #fff;
     font-weight: 600;
+    justify-content: center;
   }
 
   a.nav-item:hover {
-    background-color: #2D336B;
-    color: white;
+    background-color:rgb(230, 232, 247);
+    color: #2D336B;
   }
 
   .nav-item.active {
-    background-color: #2D336B;
-    color: white;
+    background-color: #fff;
+    color: #2D336B;
   }
 
   nav#sidebar {
     background-color: white;
+    padding-top: 20px;
   }
 
   .bg-dark {

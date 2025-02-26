@@ -1,37 +1,42 @@
-<?php include 'db_connect.php' ?>
+<?php
+include 'db_connect.php';
+?>
+
 <style>
-   .card{
-	font-family: tahoma;
-	font-size: larger;
-	font-weight: bolder;
-	text-transform: uppercase;
-	text-align: center;
-	
-   }
-  
+	.welcome-bold {
+		font-weight: bold;
+		letter-spacing: 1px;
+		color: #2D336B;
+	}
+
+	.body-center {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.vision-margin {
+		margin-bottom: 20px;
+		display: flex;
+		justify-content: center;
+	}
 </style>
 
-<div class="containe-fluid">
-
-	<div class="row">
-		<div class="col-lg-12">
-			
-		</div>
-	</div>
-
-	<div class="row mt-3 ml-3 mr-3">
-			<div class="col-lg-12">
-                <div class="card">
-                    <div class="card-body">
-                    <?php echo "Welcome back, ". $_SESSION['login_name']."!"  ?>
-                                        
-                    </div>
-                    
+<div class="container-fluid">
+    <div class="row mt-3 ml-3 mr-3">
+        <div class="col-lg-12">
+            <div class="body-center">
+                <div class="card-body">
+                    <h5 class="welcome-bold"><?php echo "Welcome back, " . $_SESSION['login_name'] . "!"; ?></h5>
                 </div>
+				<div class="vision-margin">
+					<img src="image/Vision.png" alt="Vision" height="60%" width="60%">
+				</div>
+				<div class="vision-margin">
+					<img src="image/Mision.png" alt="Mision" height="60%" width="60%">
+				</div>
             </div>
-	</div>
-
+        </div>
+    </div>
 </div>
-<script>
-	
-</script>

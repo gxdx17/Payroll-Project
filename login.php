@@ -19,11 +19,9 @@ if (isset($_SESSION['login_id'])) {
     body {
         width: 100%;
         height: 100%;
-        margin: 0;
-        padding: 0;
         font-family: Helvetica, Arial, sans-serif;
         font-size: 16px;
-        background: #f2f4f8;
+        background: #F8FAFC;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -32,43 +30,10 @@ if (isset($_SESSION['login_id'])) {
     main#main {
         width: 100%;
         height: 100%;
-        background: white;
-    }
-
-    #login-left {
-        position: absolute;
-        left: 0;
-        width: 60%;
-        height: 100%;
-        background: url(assets/img/payroll-cover.jpg) no-repeat center center/cover;
+        background: #F8FAFC;
         display: flex;
+        justify-content: center;
         align-items: center;
-    }
-
-    #login-right {
-        position: absolute;
-        right: 0;
-        width: 40%;
-        height: 100%;
-        background: white;
-        display: flex;
-        align-items: center;
-    }
-
-    #login-right::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #9fa3a7e0;
-    }
-
-    #login-right .card {
-        margin: auto;
-		border-radius: 15px;
-        z-index: 1;
     }
 
     form {
@@ -82,17 +47,20 @@ if (isset($_SESSION['login_id'])) {
         --fgColorH: 210;
         --fgColorS: 50%;
         --fgColorL: 38%;
-        --borderRadius: 0.125rem;
+        --borderRadius: 10px;
         --highlight: #306090;
+        height: 600px;
+        width: 400px;
         background: white;
         border: 1px solid var(--border);
         border-radius: var(--borderRadius);
         box-shadow: 0 1rem 1rem -0.75rem var(--border);
         padding: 1rem;
         display: flex;
+        margin-top: 50%;
+        padding: 40px;
         flex-direction: column;
         position: relative;
-        overflow: hidden;
     }
 
     .form-group {
@@ -111,12 +79,12 @@ if (isset($_SESSION['login_id'])) {
         width: 100%;
         padding: 0.5rem;
         border: 1px solid var(--border);
-        border-radius: 15px;
+        border-radius: 10px;
         font-size: 1rem;
     }
 
     input[type="submit"] {
-        background: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
+        background: #282d71;
         color: white;
         border: none;
         height: 40px;
@@ -126,7 +94,7 @@ if (isset($_SESSION['login_id'])) {
         text-transform: uppercase;
         cursor: pointer;
         margin-top: 1rem;
-        border-radius: 15px;
+        border-radius: 10px;
     }
 
     input[type="submit"]:hover {
@@ -276,6 +244,7 @@ if (isset($_SESSION['login_id'])) {
     .hello-message {
         font-size: 1.5rem;
         font-weight: bold;
+        color: black;
         text-align: start;
         margin-bottom: 1rem;
     }
@@ -286,23 +255,30 @@ if (isset($_SESSION['login_id'])) {
         margin-bottom: 10px;
     }
 
+    .margin-wageit {
+        margin-bottom: 10px;
+    }
+
+    .subhead-wageit {
+        color: grey;
+    }
+
 </style>
 <body>
     <main id="main">
-        <div id="login-left" class="column">
-		</div>
-        <div id="login-right">
-            <div class="card col-md-8">
+        <div class="">
+            <div class="col-md-8">
                 <div class="card-body">
                     <form id="login-form">
                         <h5 class="hello-message"> Hello there! </h5>
                         
-                        <div class="row"> 
-                            <h6>&nbsp &nbsp Login to your&nbsp</h6>
+                        <div class="row margin-wageit"> 
+                            <h6 class="subhead-wageit">&nbsp &nbsp Login to your&nbsp</h6>
                             <h6 class="wage-it-hello">WAGEit</h6>
-                            <h6>&nbspaccount.</h6>
+                            <h6 class="subhead-wageit">&nbspaccount.</h6>
                         </div>
                         
+
 						<figure aria-hidden="true">
                             <div class="person-body"></div>
                             <div class="neck skin"></div>
@@ -317,11 +293,22 @@ if (isset($_SESSION['login_id'])) {
                         </figure>
                         <div class="form-group">
                             <label for="username">Username</label>
-                            <input type="text" id="username" name="username" class="form-control">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" id="username" name="username" class="form-control">
+                            </div>
                         </div>
+
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input type="password" id="password" name="password" class="form-control">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                </div>
+                                <input type="password" id="password" name="password" class="form-control">
+                            </div>
                         </div>
                         <input type="submit" value="Log In">
                         

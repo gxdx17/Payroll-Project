@@ -9,8 +9,8 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
-  color: #444444;
+  font-family: "Raleway", sans-serif;
+  color: #F8FAFC;
   width: 100%;
   height: calc(100%);
 }
@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  background: #fff;
+  background: #F8FAFC;
 }
 
 #preloader:before {
@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid #1977cc;
-  border-top-color: #d1e6f9;
+  border-top-color: #F8FAFC;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -134,7 +134,6 @@ h1, h2, h3, h4, h5, h6 {
 # Top Bar
 --------------------------------------------------------------*/
 #topbar {
-  background: #fff;
   height: 40px;
   font-size: 14px;
   transition: all 0.5s;
